@@ -1,0 +1,5 @@
+function cargarProductos() {
+
+}
+
+export { cargarProductos }
