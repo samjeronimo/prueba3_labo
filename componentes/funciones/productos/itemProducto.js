@@ -1,4 +1,3 @@
-import { dataProductos } from "../data.js";
 import { eliminarProducto, resaltarProducto } from "../funcionesProductos.js";
 
 function productos(nombre) {
@@ -31,7 +30,7 @@ function productos(nombre) {
     btn_producto.innerText = "eliminar";
     precio_producto.appendChild(btn_producto);
 
-    btn_producto.addEventListener("click", eliminarProducto);
+    cuadro.addEventListener("click", eliminarProducto);
 
 
     return cuadro;

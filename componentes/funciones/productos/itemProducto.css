@@ -56,12 +56,10 @@
     justify-content: center;
 }
 
-.ocultar {
-    display: none;
-}
-
 .resaltado {
-    border: 2px solid green;
     background-color: rgb(33, 224, 33);
 }
 
+.ocultar {
+    display: none;
+}

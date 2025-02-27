@@ -7,7 +7,7 @@ function resaltarProducto() {
 
 function eliminarProducto() {
 
-    this.parentElement.classList.add('ocultar');
+    this.classList.add('ocultar');
     
 }
 
