@@ -1,7 +1,7 @@
 import { dataProductos } from "../data.js";
-import { resaltarProducto } from "../funcionesProductos.js";
+import { eliminarProducto, resaltarProducto } from "../funcionesProductos.js";
 
-function productos() {
+function productos(nombre) {
 
     let cuadro = document.createElement('div');
     cuadro.className = "producto-papa";
@@ -18,19 +18,20 @@ function productos() {
     producto.appendChild(img_producto);
 
     let nombre_producto = document.createElement('h1');
-    nombre_producto.textContent = "Tomate";
+    nombre_producto.textContent = nombre;
     nombre_producto.className = "nombre-producto"
     producto.appendChild(nombre_producto);
 
-    let precio_producto = document.createElement('p');
+    let precio_producto = document.createElement('span');
     precio_producto.innerHTML = "Q 1.50";
     producto.appendChild(precio_producto);
 
-    let btn_producto = document.createElement('a');
-    btn_producto.className = "btn-producto";
-    btn_producto.innerHTML = "eliminar"
-    btn_producto.href = "#";
+    let btn_producto = document.createElement('div');
+    btn_producto.classList = "btn-producto";
+    btn_producto.innerText = "eliminar";
     precio_producto.appendChild(btn_producto);
+
+    btn_producto.addEventListener("click", eliminarProducto);
 
 
     return cuadro;
